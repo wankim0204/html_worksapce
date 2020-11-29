@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>실습</title>
+<style>
+    #box1{
+        width:500px;
+        height: 500px;
+        background:url(https://blogfiles.pstatic.net/MjAxOTAzMjRfMTg4/MDAxNTUzNDI2MDk4MzM3.ef2Oo8dzU5tGDGfwdYQj211_iHqKdkrPjEbhi0QTBnog.KiN9sRp0RA0E7qKzmjltS28xeXQc2uwJ3U5_aF4VfX8g.JPEG.naum24/cat-3581298_640.jpg);
+    }
+    #box2{
+        width:500px;
+        height: 500px;
+        background:url(https://blogfiles.pstatic.net/MjAxOTAzMjRfMTg4/MDAxNTUzNDI2MDk4MzM3.ef2Oo8dzU5tGDGfwdYQj211_iHqKdkrPjEbhi0QTBnog.KiN9sRp0RA0E7qKzmjltS28xeXQc2uwJ3U5_aF4VfX8g.JPEG.naum24/cat-3581298_640.jpg);
+        transform: scaleX(-1);
+        
+    }
+    #box1:hover #box2{
+        animation:paid 5s forwards;
+    }
+    @keyframes paid{
+        from{opacity:1;}
+        to{opacity:0;}
+    }
+</style>
+</head>
+<body>
+    <div id="box1">
+        <div id="box2"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+#wrapper{
+	width:700px;
+	height:600px;
+	background:yellow;
+	margin:auto;
+}
+#header{
+	width:100%; /*부모의 너비까지 늘어남. 여기에선 wrapper의 크기까지 늘어남.*/
+	height:100px;
+	background:red;
+}
+#content{
+	width:100%; /*부모의 너비까지 늘어남. 여기에선 wrapper의 크기까지 늘어남.*/
+	height:400px;
+	background:gray;
+	/*자식요소를 float한 경우 부모인 div에는 overflow:hidden속성을 지정해야 문제가 발생하지 않음.*/
+	overflow:hidden;
+}
+#section{
+	width:200px;
+	height:100%;
+	background:yellow;
+	float:left;
+}
+#area{
+	width:500px;
+	height:100%;
+	background:dodgerblue;
+	float:left;
+}
+#footer{
+	width:100%; /*부모의 너비까지 늘어남. 여기에선 wrapper의 크기까지 늘어남.*/
+	height:100px;
+	background:green;
+}
+</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">위쪽 헤더</div>
+		<div id="content">
+			<div id="section">좌측</div>
+			<div id="area">우측</div>		
+		</div>
+		<div id="footer">아래쪽 푸터</div>
+	</div>
+</body>
+</html>

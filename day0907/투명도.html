@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    #box{
+        width:200px;
+        height: 200px;
+        background:url(https://blogfiles.pstatic.net/MjAxOTAzMjRfMTg4/MDAxNTUzNDI2MDk4MzM3.ef2Oo8dzU5tGDGfwdYQj211_iHqKdkrPjEbhi0QTBnog.KiN9sRp0RA0E7qKzmjltS28xeXQc2uwJ3U5_aF4VfX8g.JPEG.naum24/cat-3581298_640.jpg);
+        background-size:200px 200px;
+        margin:auto
+    }
+    #mask{
+        width:200px;
+        height: 200px;
+        background: black;
+        /* opacity 투명도 */
+        opacity:0.8; /*1 완전 불투명, 0 완전 투명*/
+    }
+    /* box에 hover시 mask의 opacity를 투명하게 처리 */
+    #box:hover #mask{
+        opacity:0.4;
+    }
+
+</style>
+</head>
+<body>
+    <!-- 이미지 배경을 가진 박스 -->
+    <div id="box">
+        <!-- 이미지를 가릴 마스크 -->
+        <div id="mask"></div>
+    </div>
+</body>
+</html>

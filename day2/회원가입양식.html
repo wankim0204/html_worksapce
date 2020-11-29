@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+/*아래와 같은 문법형식에서 대상을 가리켜, 선택자라 한다
+    ex) td 선택자
+*/
+table{
+	border:20px solid red;/*두께를 20, 실선에 빨간색*/
+	}
+td{
+	font-size:9pt;
+	background:yello;
+	}
+input{
+	background:dodgerblue;
+	color:white; /*그냥 color는 글씨 색깔*/
+	}
+select{
+	background:green;
+	color:white;
+	}
+/*선택자로 아이디를 사용할 경우 #을 붙인다.*/
+#t_name{
+	background:pink;
+	}
+body{
+	background:black;
+	}
+</style>
+<!--스타일시트를 적용하는 방법은 2가지가 있음
+    1. 인라인 방식 : 해당 태그에 직접 명시하는 방식
+						 적용대상이 많을 경우 효율성이 떨어짐
+	2. 임베드 방식 : style 태그에 일괄 적용하는 방식
+						 - 문법형식 어떤 태그를 대상으로 어떠한 처리를 할지 표현하면 됨
+						 예) td {font-size:9pt}
+-->
+</head>
+<body>
+	<table width="400px" height="400px" border="2px" align="center">
+		<tr>
+			<td colspan="2" align="center">
+				회원가입
+			</td>
+		</tr>
+
+		<tr>
+			<td align="center">ID</td>
+			<td><input type="text" placeholder="아이디 입력.."/></td>
+		</tr>
+		
+		<tr>
+			<td align="center">PW</td>
+			<td><input type="password" placeholder="비밀번호 입력.."/></td>
+		</tr>
+		
+		<tr>
+			<td align="center">Name</td>
+			<td><input type="text" id="t_name" placeholder="이름 입력.."/></td>
+		</tr>
+		
+		<tr>
+			<td align="center">phone</td>
+			<td>
+				<select>
+					<option>010</option>
+					<option>011</option>
+					<option>017</option>
+					<option>019</option>
+				</select>
+				-<input type="text" placeholder="앞4자리" size="5" maxlength="4"/>
+				-<input type="text" placeholder="뒷4자리" size="5" maxlength="4"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center">hobby</td>
+			<td>
+				여행<input type="checkbox"/>
+				독서<input type="checkbox"/>
+				운동<input type="checkbox"/>
+				IT<input type="checkbox"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center">e-mail</td>
+			<td>
+				<input type="text" placeholder="메일 아이디"/>
+				<select>
+					<option>@naver.com</option>
+					<option>@gmail.com</option>
+					<option>@hanmail.com</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr>
+			<td align="center">메일수신</td>
+			<td>
+				예<input type="radio" name="receive"/>
+				아니오<input type="radio" name="receive"/>
+			</td>
+		</tr>
+
+		<tr>
+			<td align="center">우편번호</td>
+			<td>
+				<input type="text"/ placeholder="우편번호" size="5" readonly>
+				<button>우편번호 검색</button>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<button>가입하기</button>
+			</td>
+	</table>
+</body>
+</html>
